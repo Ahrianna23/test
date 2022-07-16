@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="https://herheroism.io/assets/images/favicon.ico" />`
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Merch</title>
+
+    <!-- GOOGLE ANAYLTICS -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLE5VH10L2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-PLE5VH10L2');
+    </script>
+    
+    <script type="module" crossorigin src="/assets/merch.39a3194d.js"></script>
+    <link rel="modulepreload" href="/assets/vendor.63235096.js">
+    <link rel="modulepreload" href="/assets/Footer.279eff82.js">
+    <link rel="modulepreload" href="/assets/main.77e371bc.js">
+    <link rel="stylesheet" href="/assets/Footer.9b2e8222.css">
+    <link rel="stylesheet" href="/assets/main.e1db0591.css">
+    <link rel="stylesheet" href="/assets/merch.21240a6a.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <audio id="Audio">
+      <source src="/assets/HerHeroism-Intro.15b9dcb8.mp3">
+    </audio>
+    <div class="Audio-Text"  id="Audio-Text">Play HerHeroism Intro</div>
+    <div class="Audio-Control" id="Audio-Img">  </div>
+    
+    <script type="text/javascript">
+      const audio = document.getElementById('Audio');
+      
+      var songOn = true;
+      document.getElementById('Audio-Img').addEventListener('click', function() { 
+        if(songOn == true) { 
+          songOn = false;
+          document.getElementById('Audio-Img').classList.remove('Play');
+          document.getElementById('Audio-Img').classList.add('Pause');
+          document.getElementById('Audio').play();
+          document.getElementById('Audio-Text').style.display = "none";
+        }
+        else { 
+          songOn = true ;
+          document.getElementById('Audio-Img').classList.remove('Pause');
+          document.getElementById('Audio-Img').classList.add('Play');
+          document.getElementById('Audio').pause();
+        }
+      });
+        
+    </script>
+    
+    
+  </body>
+</html>

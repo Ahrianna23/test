@@ -2,16 +2,89 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/src/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="https://herheroism.io/assets/images/favicon.ico" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Caali</title>
-    <script type="module" crossorigin src="/assets/main.f6b32e3a.js"></script>
-    <link rel="modulepreload" href="/assets/vendor.f1b182cd.js">
-    <link rel="stylesheet" href="/assets/main.4cc8c886.css">
+    <title>HerHeroism</title>
+
+    <!-- GOOGLE ANAYLTICS -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLE5VH10L2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-PLE5VH10L2');
+    </script>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <script type="module" crossorigin src="/assets/vendor.63235096.js"></script>
+    <script type="module" crossorigin src="/assets/Footer.279eff82.js"></script>
+    <script type="module" crossorigin src="/assets/main.77e371bc.js"></script>
+    <link rel="stylesheet" href="/assets/Footer.9b2e8222.css">
+    <link rel="stylesheet" href="/assets/main.e1db0591.css">
   </head>
-  <body>
+  <body class="FullWidth-Gradient">
+    <div class="Email-Overlay" id="Email-Sequence">
+      <div class="AW-Form-1573535904"></div>
+      <script type="text/javascript">(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//forms.aweber.com/form/04/1573535904.js";
+          fjs.parentNode.insertBefore(js, fjs);
+          }(document, "script", "aweber-wjs-asqiru6sn"));
+      </script>
+      
+        <p class="email-rebuttal" id="email-rebuttal"> No thanks, I'd rather miss out.</p>
+    </div>
+    <script type="text/javascript">
+      var overlay = document.getElementById('Email-Sequence');
+
+      setTimeout(function () {
+        overlay.style.display = "block";
+        overlay.style.opacity = "1";
+      }, 10000)
+
+
+      document.getElementById("email-rebuttal").addEventListener('click', function() {
+        overlay.style.opacity = 0;
+        setTimeout(function() {
+          overlay.style.display = "none";
+        },500)
+      })
+    </script>
     <div id="root"></div>
     
+    <audio id="Audio">
+      <source src="/assets/HerHeroism-Intro.15b9dcb8.mp3">
+    </audio>
+    <div class="Audio-Text"  id="Audio-Text">Play HerHeroism Intro</div>
+    <div class="Audio-Control" id="Audio-Img">  </div>
     
+    <script type="text/javascript">
+      const audio = document.getElementById('Audio');
+      
+      var songOn = true;
+      document.getElementById('Audio-Img').addEventListener('click', function() { 
+        if(songOn == true) { 
+          songOn = false;
+          document.getElementById('Audio-Img').classList.remove('Play');
+          document.getElementById('Audio-Img').classList.add('Pause');
+          document.getElementById('Audio').play();
+          document.getElementById('Audio-Text').style.display = "none";
+        }
+        else { 
+          songOn = true ;
+          document.getElementById('Audio-Img').classList.remove('Pause');
+          document.getElementById('Audio-Img').classList.add('Play');
+          document.getElementById('Audio').pause();
+        }
+      });
+        
+    </script>
   </body>
 </html>
